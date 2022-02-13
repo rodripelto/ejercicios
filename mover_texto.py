@@ -22,8 +22,7 @@ def mover(fila,columna,color):
 col= 1
 fila= 5
 columna= 5
-
-movimiento= ""
+movimiento= b""
 while movimiento != b"0":
   mover(fila,columna,color[col])
   print(color[1],end= "")
@@ -35,7 +34,9 @@ while movimiento != b"0":
   print("Pulsa i para izquierda")
   print("Pulsa d para derecha")
   print("Pulsa 0 para salir")
+  print("Se a pulsado la tecla ",movimiento.decode('utf-8'))
   movimiento = key.getch().lower()
+
   if movimiento == b"c":
     col += 1
     if col > 3:
